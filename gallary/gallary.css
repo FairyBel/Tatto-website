@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
 body{
     margin: 0;
     background-image: url(/gallary/picture/black-concrete-texture.jpg);
@@ -8,32 +12,28 @@ body{
     height: 100vh;
     background-color: #212529;
     color: #fafcfc;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-
-
-nav{
-    border-bottom: 1px solid #b67a4b;
+#nav{
+  border-bottom: 2px solid #caac7f;
 }
 #nav-name{
-    color: #b67a4b;
-   margin-left: 15px;
-    
+  color: #fafcfc;
+  font-size: 18px;
+ 
 }
-#btn-nav{
-    color: #b67a4b;
-}
-#menu-color{
-    color: #fafcfc;
-
-}
-#menu-color:hover{
-    color: #b67a4b;
+#nav-name:hover{
+  color: #caac7f;
+  
 }
 
 .header{
     color: #fafcfc;
     text-align: center;
     margin: 25px;
+    margin-top: 50px;
     padding: 15px;
     backdrop-filter: blur(2px);
     font-weight: 500;
@@ -116,13 +116,13 @@ main{
 
 .feedback{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
-  margin: 80px;
-  
+  margin-top: 50px;
+  width: 100%;
 }     
 .feedback-par{
-  flex-wrap: wrap;
+  
   width: 30%;
   margin: 20px;
   padding: 15px;
@@ -198,3 +198,55 @@ border-radius: 10px;
   font-size: 12px;
   margin-left: 15px;
 }
+
+@media all and (max-width: 820px){
+  .feedback-par{
+    width: 70%;
+  }
+.footer{
+  flex-direction: column;
+  align-content: center;
+}
+.social{
+  margin-top: 15px;
+}
+.map{
+  margin-top: 20px;
+}
+.par-footer{
+  list-style-type: none;
+  
+}
+  
+}
+@media all and (max-width: 480px){
+  #nav-name{
+    font-size: 14px;
+  }
+  .header-par{
+    font-size: 20px;
+  }
+  .btn-form{
+    width: auto;
+  }
+  .string, p, .par-footer{
+    font-size: 14px;
+  }
+.fw-normal, #name-footer{
+  font-size: 17px;
+}
+.footer{
+  margin: 10px;
+  text-align: center;
+ 
+}
+
+.under-footer{
+  font-size: 12px;
+ 
+}
+ 
+  }
+
+
+  

@@ -10,43 +10,41 @@
 
 </head>
 <body>
-     
-    <nav class="navbar navbar-dark bg-none">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-none" id="nav" aria-label="Tenth navbar example">
         <div class="container-fluid">
-          <a class="navbar-brand" id="nav-name" href="#">Анастасия Брюханова - Tatto Artist</a>
-          <button class="navbar-toggler" id="btn-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Меню</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" id="menu-color" aria-current="page" href="#">О мастере</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" id="menu-color" aria-current="page" href="#">Галерея</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" id="menu-color" aria-current="page" href="#">Стоимость</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" id="menu-color" aria-current="page" href="#">Отзывы</a>
-                  </li>
-              </ul>
-              <div>
-              <button class="btn btn-outline-secondary me-2" id="btn-nav" type="button">Записаться</button>
-            </div>             
-            </div>
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <div class="navbar-collapse justify-content-md-center collapse " id="navbarsExample08">
+            <ul class="navbar-nav">
+              <li class="nav-item ms-4">
+                <a class="nav-link active" id="nav-name" aria-current="page" href="#about">О мастере</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link active" id="nav-name" href="/gallary/gallary.html" target="_blank">Галерея</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link active" id="nav-name" aria-disabled="true" href="#form">Записаться</a>
+              </li>
+              <li class="nav-item dropdown  ms-4">
+                <a class="nav-link dropdown-toggle" id="nav-name" href="#" data-bs-toggle="dropdown" aria-expanded="false">Контакты</a>
+                <ul class="dropdown-menu navbar-dark bg-dark">
+                  <li><a class="dropdown-item bg-dark" id="nav-name" href="#form">Напишите мне</a></li>
+                  <li><a class="dropdown-item bg-dark" id="nav-name" href="#price">Стоимость</a></li>
+                  <li><a class="dropdown-item bg-dark" id="nav-name" href="/gallary/gallary.html" target="_blank">Отзывы</a></li>
+                </ul>
+              </li>              
+            </ul>            
           </div>
         </div>
-      </nav>    
+      </nav>
 <header>   
 <div class="header">
-<h2 class="header-par">Галлерея моих работ и довольных клиентов</h2>
+<h2 class="header-par">Галерея моих работ и довольных клиентов</h2>
 </div>
 </header>
 <main>
@@ -114,7 +112,9 @@
         <button class="btn-form"><a class="string" href="../index.html">Оставить заявку</a></button>
       </div>
 </main>
-
+<div class="header">
+    <h2 class="header-par">Отзывы клиентов</h2>
+    </div>
     <div class="row feedback ">
         <div class="col-lg-4 feedback-par">
           <img class="bd-placeholder-img rounded-circle " src="/public/womanone.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
@@ -183,7 +183,10 @@
 </footer>
 
 
-<script src="gallery.js"></script>    
+  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="gallery.js"></script>  
+
 </body>
 </html>
