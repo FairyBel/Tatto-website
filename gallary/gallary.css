@@ -149,8 +149,8 @@ main{
  color: #fafcfc;
 }
 .footer-list{
-  margin-top: 38px;
   font-size: 15px;
+  text-align: start;
 }
 .par-footer{
   color: #f1f1f1;
@@ -167,7 +167,7 @@ main{
   
   margin-left: 18px;
   background-color: #caac7f;
-  border-radius: 18px;
+  border-radius: 25px;
   transition: all 0.5s ease
 }
 .icon:hover{

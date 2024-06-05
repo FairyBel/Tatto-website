@@ -30,25 +30,39 @@ body{
 }
 
 
+.animate-pulse{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 70px;
+  height: 50px;
+  width: 50px;
+  z-index: 10;
+  background-color: #b67a4b;
+  border-radius: 60%;
+  padding: 12px;
+  text-align: center;
+  animation: animate_pulse 3s infinite;
+}
+.animate-pulse i{
+  color: #f1f1f1;
+  font-size: 17px;
+}
+.animate-pulse:hover {
+ cursor: pointer;
+}
+@keyframes animate_pulse {
+  0% {
+    box-shadow: 0 0 0 0 #caac7f;
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgb(182, 122, 75, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 0 #caac7f;
+  }
+}
 
-
-/*
-#nav-name{
-    color: #b67a4b;
-   margin-left: 15px;
-    
-}
-#btn-nav{
-    color: #b67a4b;
-}
-#menu-color{
-    color: #fafcfc;
-
-}
-#menu-color:hover{
-    color: #b67a4b;
-}
-*/
 #header{
   display: flex;
   flex-direction: column;
@@ -138,11 +152,9 @@ body{
 .heading{
   display: flex;
   justify-content: center;
-  margin-top: 200px;
-  border-radius: 10px;
-  box-shadow: 0 0 18px -1px #b67a4b;
-  padding: 15px;
-  margin: 15px;
+  margin: 20px;
+  border-bottom: 2px solid #caac7f;
+ 
 }
 .heading-par{
   color: #fafcfc;
@@ -165,148 +177,30 @@ body{
     outline: 2px solid #b67a4b; /* Ширина, вид и цвет рамки */
     outline-offset: -30px; /* Выводим рамку внутри элемента */
     z-index: 1;
-    filter: grayscale(1);
+   
     transition: filter 0.5s linear;
     cursor: pointer;
    
 }
 
 .img-about-one:hover, .img-about-two:hover{
-    filter: none;    
+  filter: grayscale(1);  
   }
    
   .cnt-par{
     display: flex;
     flex-direction: column;
-       
+    margin-top: 20px; 
   }
   .par{
-    padding: 8px;
     color: #fafcfc;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    margin-top: 10px;
-    white-space: normal;
-    text-align: justify;
-  }
- 
-  /*  carousel */
-
-  /*
-.carousel-cnt{
-    display: flex;
-    flex-direction: column;
-    margin-top: 120px;
-    
-  
-  }
-  #carousel {
-   display: flex;
-    height: 400px;
-    margin-top: 100px;
-    transform: translateY(-50%);
-    overflow: hidden;
-    cursor: pointer;
-  }
-  #carousel div {
-    position: absolute;
-    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
-    opacity: 1;
-  }
-  #carousel div img {
-    width: 400px;
-    transition: width 1s;
-  }
-  #carousel div.hideLeft {
-    left: 0%;
-    opacity: 0;
-    transform: translateY(50%) translateX(-50%);
-  }
-  #carousel div.hideLeft img {
-    width: 200px;
-  }
-  #carousel div.hideRight {
-    left: 100%;
-    opacity: 0;
-    transform: translateY(50%) translateX(-50%);
-  }
-  #carousel div.hideRight img {
-    width: 200px;
-  }
-  #carousel div.prev {
-    z-index: 5;
-    left: 30%;
-    transform: translateY(50px) translateX(-50%);
-  }
-  #carousel div.prev img {
-    width: 300px;
-  }
-  #carousel div.prevLeftSecond {
-    z-index: 4;
-    left: 15%;
-    transform: translateY(50%) translateX(-50%);
-    opacity: 0.7;
-  }
-  #carousel div.prevLeftSecond img {
-    width: 200px;
-  }
-  #carousel div.selected {
-    z-index: 10;
-    left: 50%;
-    transform: translateY(0px) translateX(-50%);
-  }
-  #carousel div.next {
-    z-index: 5;
-    left: 70%;
-    transform: translateY(50px) translateX(-50%);
-  }
-  #carousel div.next img {
-    width: 300px;
-  }
-  #carousel div.nextRightSecond {
-    z-index: 4;
-    left: 85%;
-    transform: translateY(50%) translateX(-50%);
-    opacity: 0.7;
-  }
-  #carousel div.nextRightSecond img {
-    width: 200px;
+    font-style: normal; 
+    text-indent: 2em;   
   }
   
-  .btn-carousel{
-    display: flex;
-    justify-content: center;
-    margin-top: -170px;
-     
-  }
-
-  #prev, #next{
-    padding: 6px;
-    margin: 6px;
-    opacity: 0.5;
-    background-color: #caac7f;
-    border-radius: 40px;
-    transition: all 0.5s ease;    
-     
-  }
-  #prev:hover, #next:hover{
-    transform: scale(1.1);
-  }
-
-.btn-cnt-carousel{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    margin-bottom: 80px;
-    padding: 10px;
-    
-}
-
-
-*/
 
 .cnt-gallery{
   display: flex;
@@ -355,7 +249,7 @@ body{
 }
 .att-par{
   padding: 6px;
-  color: #b67a4b;
+  color: #fafcfc;
   font-size: 16px;
 }
 .card-price{
@@ -470,7 +364,7 @@ body{
 	width: 80%;
 	border-radius: 30px;
 }
-.container .cnt-button:nth-child(1)::before, /*chnage 1*/
+.container .cnt-button:nth-child(1)::before,
 .container .cnt-button:nth-child(1)::after {
 	background: #caac7f;
 	box-shadow: 0 0 5px #caac7f, 0 0 15px #caac7f, 0 0 30px #caac7f,
@@ -486,8 +380,7 @@ body{
   background-position: right 35% top 45%;
   width: 100%;
   height: 100%;
-  padding: 10px;
- 
+  padding: 10px; 
 }
 
 
@@ -496,7 +389,7 @@ body{
   flex-direction: column;
   align-self: center;
   background-color: rgb(163, 161, 161, 0.3);
-  width: 45%;
+  width: 40%;
   height: 90%;
   border: 3px double #b67a4b;
   padding: 10px;
@@ -517,7 +410,7 @@ body{
   max-width: 100%;
 }
 #text-form{
-  padding: 3px;
+  padding: 5px;
   border-radius: 6px;
   cursor: pointer;
   max-width: 100%;
@@ -525,22 +418,24 @@ body{
 #text-form:hover, #text-form-par:hover{
   border: 2px solid #b67a4b;
 }
-#text-form-par{
-  width: 100%;
-  max-width: 100%;
-  padding: 25px;
+#label-form-par{
+  display: block;
+  color: #f1f1f1;
+  font-size: 15px;
+  padding: 6px;
   margin: 5px;
-  border-radius: 6px;
-  cursor: pointer;
+  
+}
+#text-form-par{
+ min-width: 100%;
+ min-height: 120px;
+ border-radius: 6px;
+ resize: vertical;
+padding: 20px;
 }
 
-#submit{
-  margin: 12px;
-  width: 100%;
- align-items: center;
-}
+
 #checkbox{
-  margin: 15px;
   padding: 8px;
 
 }
@@ -587,7 +482,7 @@ align-self: center;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .logo-footer{
   text-align: center;
@@ -602,8 +497,8 @@ align-self: center;
  color: #fafcfc;
 }
 .footer-list{
-  margin-top: 38px;
   font-size: 15px;
+  text-align: start;
 }
 .par-footer{
   color: #f1f1f1;
@@ -619,7 +514,7 @@ align-self: center;
 .icon{
   margin-left: 18px;
   background-color: #caac7f;
-  border-radius: 18px;
+  border-radius: 20px;
   transition: all 0.5s ease
 }
 .icon:hover{

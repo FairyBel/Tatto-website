@@ -32,97 +32,87 @@ gsap.from(".btn-gallery", {
   delay:1
 })*/
 
-/*AOS.init();*/
 
-/*
-function moveToSelected(element) {
 
-    if (element == "next") {
-      var selected = $(".selected").next();
-    } else if (element == "prev") {
-      var selected = $(".selected").prev();
-    } else {
-      var selected = element;
+//FORM
+
+const form = document.getElementById('form');
+form.addEventListener('submit', formSend);
+
+async function formSend(e){
+  e.preventDefault();
+
+  let error = formValidate(form);
+
+  let formData = newFormData(form);
+
+
+  if (error === 0){
+    form.classList.add('_sending');
+    let response = await fetch ('sendmail.php', {
+      method:'POST',
+      body:formData
+    });
+    if(response.ok){
+      let result = await response.json();
+      alert(result.message);
+      formPreview.innerHTML = '';
+      form.reset();
+      form.classList.remove('_sending');
+    }else{
+      alert('Ошибка!');
+      form.classList.remove('_sending');
     }
-  
-    var next = $(selected).next();
-    var prev = $(selected).prev();
-    var prevSecond = $(prev).prev();
-    var nextSecond = $(next).next();
-  
-    $(selected).removeClass().addClass("selected");
-  
-    $(prev).removeClass().addClass("prev");
-    $(next).removeClass().addClass("next");
-  
-    $(nextSecond).removeClass().addClass("nextRightSecond");
-    $(prevSecond).removeClass().addClass("prevLeftSecond");
-  
-    $(nextSecond).nextAll().removeClass().addClass('hideRight');
-    $(prevSecond).prevAll().removeClass().addClass('hideLeft');
-  
-  }
-  
-  // Eventos teclado
-  $(document).keydown(function(e) {
-      switch(e.which) {
-          case 37: // left
-          moveToSelected('prev');
-          break;
-  
-          case 39: // right
-          moveToSelected('next');
-          break;
-  
-          default: return;
-      }
-      e.preventDefault();
-  });
-  
-  $('#carousel div').click(function() {
-    moveToSelected($(this));
-  });
-  
-  $('#prev').click(function() {
-    moveToSelected('prev');
-  });
-  
-  $('#next').click(function() {
-    moveToSelected('next');
-  });
-*/
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //form
-
-  document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-   
-    let name = document.getElementById('text-form').value;
-    let email = document.getElementById('text-form-par').value;
+  }else{
+    Swal.fire("Заполните все поля!");
     
-   
-    // Здесь будет код для отправки данных на сервер
-   
-    alert('Сообщение отправлено!');
-    this.reset();
-  });
+  }
+
+}
+
+function formValidate(form){
+  let error = 0;
+  let formReq = document.querySelectorAll('_req');
+    for (let index=0; index<formReq.length; index++){
+      const input = formReq[index];
+      formRemoveError(input);
+
+      if (input.classList.contains('_email')){
+        if(emailTest(input)){
+          formAddError(input);
+          error++;
+        }
+        else if (input.getAttribute('type') === 'checkbox' && input.checked === false){
+          formAddError(input);
+          error++;
+        }else{
+          if(input.value === ''){
+            formAddError(input);
+            error++;
+          }
+        }
+      }
+      return error;
+  }
+
+      function formAddError(input){
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error');
+      }
+      function formRemoveError(input){
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
+      }
+      function emailTest(input){
+        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+      }
+    
+    };
+
+
+//очистка формы после отправки сообщения
+window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
