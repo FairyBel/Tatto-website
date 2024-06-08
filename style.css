@@ -574,7 +574,7 @@ border-radius: 10px;
   }
   .btn-cnt{
     position: relative;
-    top: 350px;
+    top: 450px;
     width: 80%;
   }
   .cnt-main{
@@ -588,7 +588,8 @@ border-radius: 10px;
   .about{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
   }
   
   .img-about-one, .img-about-two{
@@ -600,8 +601,7 @@ border-radius: 10px;
     align-self: center;
   }
   .btn-cnt-carousel{
-    width: 80%;
-    margin-left: 100px;    
+    justify-content: center;    
   }
   .att-par{
     color: #fafcfc;
@@ -619,48 +619,52 @@ border-radius: 10px;
   }
   .footer-list{
     position: absolute;
-    top: 40px;
-    left: 30px;
+    top: 70px;
+    left: 70px;
+    
+  }
+  #map{
+    margin-top: 15px;
+  }
+  .map{
+    position: absolute;
+    left: 220px;
+    width: 350px;
+  
   }
 }
+
 @media all and (max-width: 768px){
   
-  .header-cnt{
-    margin-top: 200px; 
+  .header-cnt{   
     margin: 5px;  
   }
   .btn-cnt{
-   margin-top: 100px;
-   width: 80%;    
+  top: 300px;
+   width: 100%;    
   }
   .cnt-main{
     margin-top: -50px;
   }
-
+ 
 
 .btn-cnt-carousel{
-  width:100%;
-  margin-left: 0;
+  font-size: 14px;
 }
 .form{
-  width: 80%;
-
+  width: 70%;
 }
 .map{
-  position: absolute;
-  width: 280px;
-  height: 200px;
-  top: 15px;
-  left: 140px;
+  height: 180px;
+ left: 180px;
+  
 }
 
 .footer{
  display: flex;
  justify-content: space-around;
 }
-.logo-footer{
- align-items: center;
-}
+
 .name-footer{
   display: flex;
   flex-direction: column;
@@ -682,27 +686,28 @@ border-radius: 10px;
     font-size: 28px;
   }
   .header-cnt{
-     top: 200px;
-      
+    top: 150px;
   }
   .btn-cnt{
     display: flex;
-      flex-direction: column;
-      align-items: center;
-      top: 170px;
-     
+    flex-direction: column;
+    align-items: center;
+    top: 100px;
+     width: 80%;
 
   }
-  .btn-header, .btn-gallery{
-    font-size: 15px;
+  .img-about-one, .img-about-two{
+    outline-offset: -15px;
   }
   .par{
-    font-size: 16px;
+    font-size: 15px;
+    text-align: justify;
   }
   .btn-cnt-carousel{
     flex-direction: column;
     align-items: center;
     margin-top: 0;
+    font-size: 13px;
   }
 
 .heading-par{
@@ -712,77 +717,125 @@ border-radius: 10px;
 .att-par, .string{
   font-size: 15px;
 }
-.container-form{
-  background-position:right 10% top 5%;
-}
+
 .form{
   width: auto;
+  
+}
+.form-par, .btn-form, label, input{
+  font-size: 14px;
 }
 
 .footer{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: -5px;
+ justify-content: center;
+}
+
+#name-footer{
+ font-size: 18px;
 }
 .map{
-  left: 80px;
+ left: 60px;
+ width: 70%;
+  
 }
- .footer-list{
-  margin-top: 20px;
- }
+.social{
+  margin-left: -70px;
+}
  .name-footer{
-  margin-top: 70px;
+  margin: 90px 0 0 0;
+ }
+ .footer-list{
+  margin-left: -25px;
+ }
+ .par-footer{
+  font-size: 12px;
+  
+ }
+ .under-footer{
+  font-size: 10px;
  }
  .hr{
-   margin-top: 30px;
+   margin-top: 50px;
  }
 }
 
 
 @media all and (max-width:375px){
   .header{
-    font-size: 32px;
-    
+    font-size:25px;
+    letter-spacing: 2px;    
   }
   .head-text{
-    font-size: 20px;
+    font-size:20px;
   }
-  .header-cnt{
-     top: 180px;
-      
-  }
+ 
   .btn-cnt{
-      top: 150px;      
-  }
-  .string{
-    font-size: 15px;
-  }
-  .par, .att-par, .card-price, .form-par{
-    font-size: 14px;
-  }
-  label, input, .btn-form{
-    font-size: 12px;
+    top: 20px;
   }
   .img-about-one, .img-about-two{
-    width:250px;
-   height: 250px;
-   outline-offset: -15px;
+    width: 80%;
+    height: 280px;
+   
+  }
+.btn-cnt-carousel{
+  margin: 0;
+}
+  .cnt-price{
+    justify-content: center;
+  }
+  .card-price{
+    width: 100%;
+    
   }
 
-  .map{
-    top: 15px;
-    left: 50px;
+  .img-price{
+    width: 100%;
+    height: 280px;
   }
-  
-  #name-footer{
-    font-size: 15px;
-  }
-  .par-footer, .under-footer{
+ 
+    
+  .att-par, .par, .card-price, .string{
     font-size: 12px;
   }
+  .heading-par{
+    font-size: 18px;
+  }
+  .form-par h4{
+    font-size: 14px;
+  }
+  .footer-list, .par-footer, #label, 
+  #text-form, #label-form-par, #text-form-par, 
+  #checkbox, .btn-form{
+    font-size: 12px;
+  }
+  .under-footer{
+    font-size: 7px;
+    text-align: center;
+  }
+.icon{
+  width: 25px;
+}
+.social{
+ margin: 0;
+  
+}
+  .iframe, #map{
+    width: auto;
+    height: 150px;
+    
+  }
+  .name-footer{
+    margin-top: 80px;
+    margin-left: 20px;
+  }
   .footer-list{
-   margin-left: 0;
+    margin-left: -35px;
+  }
+  #name-footer{
+    font-size: 14px;
   }
   
   
