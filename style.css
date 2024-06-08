@@ -20,6 +20,18 @@ body{
     font-style: normal;
  
 }
+#nav{
+  border-bottom: 2px solid #caac7f;
+}
+#nav-name{
+  color: #fafcfc;
+  font-size: 18px;
+ 
+}
+#nav-name:hover{
+  color: #caac7f;
+  
+}
 
 .animate-pulse{
   position: fixed;
@@ -162,8 +174,8 @@ body{
   }
   
   .img-about-one, .img-about-two{
-    width:450px;
-   height: 500px;
+    width:400px;
+    height: 500px;
     padding: 20px;
     outline: 2px solid #b67a4b; /* Ширина, вид и цвет рамки */
     outline-offset: -30px; /* Выводим рамку внутри элемента */
@@ -549,6 +561,7 @@ border-radius: 10px;
   height: 400px;
   
 }
+
 .par{
   margin: 0;
 }
@@ -633,9 +646,14 @@ flex-wrap: wrap;
 
 
 }
+.par-footer{
+  list-style-type: none;
+  
+}
 .logo-footer{
   align-self: center;
 }
+
 .name-footer{
   align-self: center;
   margin-left: 65px;
@@ -648,9 +666,12 @@ flex-wrap: wrap;
 }
 
 
-@media all and (max-width: 600px){
+@media all and (max-width: 640px){
+  .header-cnt{
+    margin-top: 50px;
+  }
   .btn-cnt{
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .btn-header, .btn-gallery{
     height: auto;
@@ -798,8 +819,11 @@ flex-wrap: wrap;
   }
 .icon{
   width: 25px;
+  
 }
-
+.social{
+ margin-left: -50px;
+}
   .iframe, #map{
     
     width: auto;
@@ -808,6 +832,7 @@ flex-wrap: wrap;
   }
   .name-footer{
    margin-left: 45px;
+   margin-right: 10px;
   }
   
   #name-footer{
