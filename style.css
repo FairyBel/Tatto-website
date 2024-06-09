@@ -373,9 +373,6 @@ body{
 	box-shadow: 0 0 5px #caac7f, 0 0 15px #caac7f, 0 0 30px #caac7f,
 		0 0 60px #caac7f;
 }
-
-
-
 .container-form{
   background-image: url(/public/bg-form.jpg);
   background-repeat: no-repeat;
@@ -385,8 +382,6 @@ body{
   height: 100%;
   padding: 10px; 
 }
-
-
 .form{
   display: flex;
   flex-direction: column;
@@ -439,9 +434,26 @@ padding: 20px;
 
 
 #checkbox{
-  padding: 8px;
+  padding: 5px;
 
 }
+
+#check{
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fafcfc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+#check:checked{
+  background-color: #b67a4b;
+ 
+}
+
 .container-btn-form{
 align-self: center;
  width: 100%;
@@ -478,7 +490,6 @@ align-self: center;
   box-shadow: #b67a4b 0 3px 3px inset;
   transform: translateY(2px);
 }
-
 
 
 .footer{

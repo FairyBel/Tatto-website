@@ -185,22 +185,22 @@
                 <h1 class="heading-par">Оставьте заявку</h1>
             </div>
             <div class="container-form">
-                <form class="form" id="form" action="#" method="post">
+                <form class="form" id="form" action="https://api.web3forms.com/submit" method="POST">
+                     <input type="hidden" name="access_key" value="220f53ff-a9fa-4289-b138-0176e1e0e866">
                     <div class="form-par">
                         <h4>Напишите мне и я свяжусь с вами в ближайшее время!</h4>
                     </div>
                     <label for="Name" id="label">Ваше полное имя</label>
-                    <input type="text" id="text-form" class="_req" placeholder="Ваше имя..." required>
+                    <input type="text" name="name" id="text-form"  placeholder="Ваше имя..." required autocomplete="off">
                     <label for="email" id="label">Email</label>
-                    <input type="email" id="text-form" class="_req" placeholder="email@" required>
+                    <input type="email" name="email" id="text-form"  placeholder="email@" required autocomplete="off">
                     <label for="tel" id="label">Номер телефона</label>
-                    <input type="tel" id="text-form" placeholder="+7..." required>
+                    <input type="tel" name="tel" id="text-form" placeholder="+7..."  required autocomplete="off">
                     <label for="text" id="label-form-par">Ваше сообщение</label>
-                        <textarea id="text-form-par" name="comment" placeholder="Текст..." required></textarea>
-                   
-                    
+                        <textarea id="text-form-par" name="comment" placeholder="Текст..." required autocomplete="off"></textarea>
+                          
                     <label for="checkbox" id="checkbox">
-                        <input type="checkbox" checked class="_req" id="check"> Даю согласие на обработку персональных данных
+                        <input type="checkbox" checked required id="check"> Даю согласие на обработку персональных данных
                     </label>
                     <div class="container-btn-form">
                         <button class="btn-form" type="submit">Отправить</button>
@@ -258,7 +258,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script> -->
-    
+    <script src="https://web3forms.com/client/script.js" async defer></script>
    
     <script src="index.js"></script>
     

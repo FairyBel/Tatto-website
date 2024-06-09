@@ -126,26 +126,26 @@
     <h2 class="header-par">Оставьте заявку</h2>
     </div>
   <div class="container-form">
-      <form class="form" id="form" action="#" method="post">
-          <div class="form-par">
-              <h4>Напишите мне и я свяжусь с вами в ближайшее время!</h4>
-          </div>
-          <label for="Name" id="label">Ваше полное имя</label>
-          <input type="text" id="text-form" class="_req" placeholder="Ваше имя..." required>
-          <label for="email" id="label">Email</label>
-          <input type="email" id="text-form" class="_req" placeholder="email@" required>
-          <label for="tel" id="label">Номер телефона</label>
-          <input type="tel" id="text-form" placeholder="+7..." required>
-          <label for="text" id="label-form-par">Ваше сообщение</label>
-              <textarea id="text-form-par" name="comment" placeholder="Текст..." required></textarea>
-         
-          
-          <label for="checkbox" id="checkbox">
-              <input type="checkbox" checked class="_req" id="check"> Даю согласие на обработку персональных данных
-          </label>
-          <div class="container-btn-form">
-              <button class="btn-form" type="submit">Отправить</button>
-          </div>
+          <form class="form" id="form" action="https://api.web3forms.com/submit" method="POST">
+               <input type="hidden" name="access_key" value="220f53ff-a9fa-4289-b138-0176e1e0e866">
+              <div class="form-par">
+                  <h4>Напишите мне и я свяжусь с вами в ближайшее время!</h4>
+              </div>
+              <label for="Name" id="label">Ваше полное имя</label>
+              <input type="text" name="name" id="text-form" placeholder="Ваше имя..." required autocomplete="off">
+              <label for="email" id="label">Email</label>
+              <input type="email" name="email" id="text-form" placeholder="email@" required autocomplete="off">
+              <label for="tel" id="label">Номер телефона</label>
+              <input type="tel" name="tel" id="text-form" placeholder="+7..." required autocomplete="off">
+              <label for="text" id="label-form-par">Ваше сообщение</label>
+                  <textarea id="text-form-par" name="comment" placeholder="Текст..." required autocomplete="off"></textarea>           
+              
+              <label for="checkbox" id="checkbox">
+                  <input type="checkbox" checked class="_req" id="check"> Даю согласие на обработку персональных данных
+              </label>
+              <div class="container-btn-form">
+                  <button class="btn-form" type="submit">Отправить</button>
+              </div>
       </form>
   </div>
 </section>
@@ -184,7 +184,7 @@
         <p class="par-footer">Сертифицированный тату мастер</p>
         <ul class="footer-list">
           <li class="par-footer"><a href="../index.html" target="_blank" class="par-footer">О мастере</a></li>
-          <li class="par-footer"><a href="#" target="_blank" class="par-footer">Галерея</a></li>
+          <li class="par-footer"><a href="gallary.html" target="_blank" class="par-footer">Галерея</a></li>
           <li class="par-footer"><a href="../index.html" target="_blank" class="par-footer">Услуги и цены</a></li>
           <li class="par-footer"><a href="#" class="par-footer">Контакты</a></li>
       </ul>

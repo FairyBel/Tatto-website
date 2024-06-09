@@ -242,9 +242,23 @@ background-color: #212529;
 
 #checkbox{
   padding: 8px;
-  
-
 }
+  #check{
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fafcfc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  
+  }
+  #check:checked{
+    background-color: #b67a4b;
+   
+  } 
+
+
 .container-btn-form{
 align-self: center;
  width: 100%;
