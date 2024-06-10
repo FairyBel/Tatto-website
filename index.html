@@ -33,16 +33,17 @@
                 <a class="nav-link active" id="nav-name" href="/gallary/gallary.html" target="_blank">Галерея</a>
               </li>
               <li class="nav-item ms-4">
-                <a class="nav-link active" id="nav-name" aria-disabled="true" href="#form">Записаться</a>
+                <a class="nav-link active" id="nav-name" aria-disabled="true" href="#price">Цены и услуги</a>
               </li>
-              <li class="nav-item dropdown ms-4">
-                <a class="nav-link dropdown-toggle" id="nav-name" href="#" data-bs-toggle="dropdown" aria-expanded="false">Контакты</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" id="nav-name" href="#social">Связь со мной</a></li>
-                  <li><a class="dropdown-item" id="nav-name" href="#price">Стоимость</a></li>
-                  <li><a class="dropdown-item" id="nav-name" href="/gallary/gallary.html" target="_blank">Отзывы</a></li>
-                </ul>
-              </li>              
+              <li class="nav-item ms-4">
+                <a class="nav-link active" id="nav-name" aria-disabled="true" href="#social">Мои контакты</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link active" id="nav-name" aria-disabled="true" href="#feedback">Отзывы</a>
+              </li>
+              <li class="nav-item ms-4">
+                <a class="nav-link active" id="nav-name" aria-disabled="true" href="#form">Записаться</a>
+              </li>         
             </ul>            
           </div>
         </div>
@@ -76,7 +77,7 @@
                     </div>
                     <div class="cnt-par">
                         <p class="par"> Добро пожаловать на сайт тату, где искусство татуировки становится частью вашей индивидуальности.</p>
-                        <p class="par"> Здесь техническое мастерство сочетается с творчеким подходом. Ваши идеи воплощаются в уникальные произведения искусства.</p>
+                        <p class="par"> Здесь техническое мастерство сочетается с творческим подходом. Ваши идеи воплощаются в уникальные произведения искусства.</p>
                         <p class="par par-style" >Меня зовут <strong>Анастасия</strong> и я опытный тату мастер. Обучалась и работаю в тату студии Диониса Пахомова в Кургане.</p>
                         <p class="par">Я ценю индивидуальность каждого клиента, создавая не просто татуировки, а истории, которые рассказывают о вашей уникальности.
                         Приглашаю вас ознакомиться с моим портфолио, выбирайте тату и записывайтесь на прием!</p>
@@ -180,27 +181,56 @@
                 </div>
             </div>
         </section>
+
+        <section id="feedback">
+            <div class="heading">
+                <h2 class="heading-par">Отзывы клиентов</h2>
+                </div>
+                <div class="row feedback ">
+                    <div class="col-lg-4 feedback-par">
+                      <img class="bd-placeholder-img rounded-circle " src="/public/womanone.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                      <h3 class="fw-normal" >Все получилось!</h3>
+                      <p class="par">Настя прекрасно меня поняла и смогла сделать именно то, что я хотела. Спасибо большое! Я обязательно еще вернусь к этому мастеру и продолжу работу!</p>
+                      <p class="par">Лера В.</p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 feedback-par">
+                      <img class="bd-placeholder-img rounded-circle" src="/public/manone.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                      <h3 class="fw-normal">Отличный мастер!</h3>
+                      <p class="par">Хочу выразить большую благодарность тату-мастеру Анастасии. Она не только смогла исправить предыдущую работу, но и предвосхитила все мои ожидания. В следующий раз, когда я снова буду в Кургане, то обязательно обращусь к ней снова.</p>
+                      <p class="par">Николай Т.</p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4 feedback-par">
+                      <img class="bd-placeholder-img rounded-circle" src="/public/womanetwo.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+                      <h3 class="fw-normal">Прекрасный результат!</h3>
+                      <p class="par">Я очень долго искала мастера и не могла определиться с выбором. Но с Настей все сомнения ушли, она не только услышала меня, но и сделала тату даже лучше, чем я хотела! Всем рекомендую именно Брюханову Настю!</p>
+                      <p class="par">Кристина А.</p>
+                    </div><!-- /.col-lg-4 -->
+                  </div>
+            
+                </section>
+
+
+
         <section id="form">
             <div class="heading">
                 <h1 class="heading-par">Оставьте заявку</h1>
             </div>
             <div class="container-form">
                 <form class="form" id="form" action="https://api.web3forms.com/submit" method="POST">
-                     <input type="hidden" name="access_key" value="220f53ff-a9fa-4289-b138-0176e1e0e866">
+                     <input type="hidden" name="access_key" value="d8739e5c-8f09-4f6a-8256-5f2495c35d43">
                     <div class="form-par">
                         <h4>Напишите мне и я свяжусь с вами в ближайшее время!</h4>
                     </div>
-                    <label for="Name" id="label">Ваше полное имя</label>
-                    <input type="text" name="name" id="text-form"  placeholder="Ваше имя..." required autocomplete="off">
+                    <label for="Name" id="label">Ваше имя</label>
+                    <input type="text" name="name" id="text-form"  placeholder="Иванов Иван..." required autocomplete="off">
                     <label for="email" id="label">Email</label>
-                    <input type="email" name="email" id="text-form"  placeholder="email@" required autocomplete="off">
+                    <input type="email" name="email" id="text-form"  placeholder="example@ya.ru" required autocomplete="off">
                     <label for="tel" id="label">Номер телефона</label>
-                    <input type="tel" name="tel" id="text-form" placeholder="+7..."  required autocomplete="off">
+                    <input type="tel" name="tel" id="text-form" placeholder="+7 900 000 00 00"  required autocomplete="off">
                     <label for="text" id="label-form-par">Ваше сообщение</label>
-                        <textarea id="text-form-par" name="comment" placeholder="Текст..." required autocomplete="off"></textarea>
-                          
+                        <textarea id="text-form-par" name="comment" placeholder="Your message..." required autocomplete="off"></textarea>
                     <label for="checkbox" id="checkbox">
-                        <input type="checkbox" checked required id="check"> Даю согласие на обработку персональных данных
+                    <input type="checkbox" checked required id="check"> Даю согласие на обработку персональных данных
                     </label>
                     <div class="container-btn-form">
                         <button class="btn-form" type="submit">Отправить</button>
@@ -225,7 +255,7 @@
             
             <div class="name-footer">
                 <h4 id="name-footer">Мои контакты</h4>
-                <ul>
+                <ul class="footer-list">
                     <li class="par-footer">г. Курган, ул. Коли Мяготина, д. 56 А, оф.922</li>
                     <li class="par-footer"><a class="par-footer" href="tel:+79128374160" target="_blank" >телефон +7 912-837-41-60</a></li>
                 </ul>

@@ -25,7 +25,7 @@ body{
 }
 #nav-name{
   color: #fafcfc;
-  font-size: 18px;
+  font-size: 16px;
  
 }
 #nav-name:hover{
@@ -35,11 +35,10 @@ body{
 
 .animate-pulse{
   position: fixed;
-  bottom: 40px;
-  right: 40px;
-  width: 70px;
-  height: 50px;
+  bottom: 65px;
+  right: 20px;
   width: 50px;
+  height: 50px;  
   z-index: 10;
   background-color: #b67a4b;
   border-radius: 60%;
@@ -203,7 +202,9 @@ body{
     font-style: normal; 
     text-indent: 2em;   
   }
-  
+  strong{
+    color: #b67a4b;
+  }  
 
 .cnt-gallery{
   display: flex;
@@ -373,6 +374,26 @@ body{
 	box-shadow: 0 0 5px #caac7f, 0 0 15px #caac7f, 0 0 30px #caac7f,
 		0 0 60px #caac7f;
 }
+
+
+.feedback{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 100%;
+}     
+.feedback-par{
+  
+  width: 30%;
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 18px -1px #b67a4b;
+} 
+
+
 .container-form{
   background-image: url(/public/bg-form.jpg);
   background-repeat: no-repeat;
@@ -431,7 +452,6 @@ body{
  resize: vertical;
 padding: 20px;
 }
-
 
 #checkbox{
   padding: 5px;
@@ -616,14 +636,51 @@ border-radius: 10px;
   .att-par{
     color: #fafcfc;
   }
+
   
   .form{
     width: 60%;
   
+  }  
+}
+
+
+@media all and (max-width: 820px){
+  .feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
- 
+  
+  .feedback-par{
+    width: 70%;
+  }
+  .footer{
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+  }
+  .social{
+    margin-top: 15px;
+    text-align: center;
+  }
+.map{
+  margin-top: 20px;
+}
+.par-footer{
+  list-style-type: none;
   
 }
+.footer-list{
+  margin: 0;
+  text-align: center;
+  margin-left: -40px;
+}
+
+}
+
+
 
 @media all and (max-width: 768px){
   
@@ -640,34 +697,9 @@ border-radius: 10px;
 .heading-par{
   text-align: center;
 }
-.form{
-  width: 70%;
-}
-.map{
+
+.under-footer{
   text-align: center;
-  height: 180px;
- margin-top: 15px;
-  
-}
-
-.footer{
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-
-
-}
-.par-footer{
-  list-style-type: none;
-  
-}
-.logo-footer{
-  align-self: center;
-}
-
-.name-footer{
-  align-self: center;
-  margin-left: 65px;
 }
 
 .hr{
@@ -697,7 +729,9 @@ flex-wrap: wrap;
 }
 
 @media all and (max-width:480px){
-    
+  #nav-name{
+    font-size: 14px;
+  }
   .header{
     font-size: 38px;
     
@@ -719,9 +753,9 @@ flex-wrap: wrap;
     outline-offset: -15px;
   }
   .par{
+    text-align: center;
     font-size: 15px;
-    text-align: justify;
-  }
+   }
   .btn-cnt-carousel{
     flex-direction: column;
     align-items: center;
@@ -733,50 +767,50 @@ flex-wrap: wrap;
   text-align: center;
   font-size: 20px;
 }
-.att-par, a.string{
-  font-size: 13px;
+.att-par{
+  font-size: 14px;
+}
+.fw-normal{
+  font-size: 17px;
+}
+.feedback{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
 }
 
 .form{
-  width: auto;
+  width:80%;
   
 }
-.form-par, .btn-form, #label, 
+.form-par, .btn-form, #label, .par-footer, 
 #text-form, #label-form-par, #text-form-par, 
 #checkbox{
   font-size: 14px;
 }
-
-
-#name-footer{
- font-size: 18px;
+.form-par h4{
+  font-size: 16px;
 }
-.map{
- left: 60px;
- width: 70%;
-  
-}
-.social{
-  text-align: center;
-}
- 
- .footer-list{
-  margin-left: 0;
- }
- .par-footer{
-  font-size: 12px;
-  
- }
- .under-footer{
+.under-footer{
   font-size: 10px;
- }
- .hr{
+ 
+}
+.fw-normal, #name-footer{
+ font-size: 17px;
+}
+  
+.hr{
    margin-top: 50px;
+ }
+ iframe{
+  width: 80%;
  }
 }
 
 
 @media all and (max-width:375px){
+ 
   .header{
     font-size:25px;
     letter-spacing: 2px;    
@@ -789,8 +823,8 @@ flex-wrap: wrap;
     top: 20px;
   }
   .img-about-one, .img-about-two{
-    width: 80%;
-    height: 280px;
+    max-width: 100%;
+    height: 350px;
    
   }
 .btn-cnt-carousel{
@@ -805,8 +839,8 @@ flex-wrap: wrap;
   }
 
   .img-price{
-    width: 100%;
-    height: 280px;
+    max-width: 100%;
+    
   }
  
     
@@ -824,31 +858,20 @@ flex-wrap: wrap;
   #checkbox, .btn-form{
     font-size: 12px;
   }
-  .under-footer{
-    font-size: 7px;
-    text-align: center;
-  }
+  
 .icon{
   width: 25px;
   
 }
-.social{
- margin-left: -50px;
-}
-  .iframe, #map{
-    
-    width: auto;
-    height: 150px;
-    
-  }
-  .name-footer{
-   margin-left: 45px;
-   margin-right: 10px;
-  }
-  
+ 
   #name-footer{
     font-size: 14px;
   }
+  .footer{
+    margin: 10px;
+      
+  }
   
+   
   
 }
