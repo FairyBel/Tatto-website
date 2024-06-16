@@ -364,6 +364,10 @@ border-radius: 10px;
   font-size: 12px;
   margin-left: 15px;
 }
+.creator{
+  color: #fafcfc;
+  text-decoration: none;
+}
 
 @media all and (max-width: 820px){
   .form{
