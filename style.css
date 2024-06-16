@@ -148,7 +148,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 120px;
     
 }
 .heading{
@@ -598,6 +598,7 @@ border-radius: 10px;
 }
 .heading{
   margin: 15px;
+  margin-top: 30px;
 }
 }
 @media all and (max-width:1024px){
@@ -605,11 +606,17 @@ border-radius: 10px;
     min-height: 100vh;
     align-items: center;
   }
-  
+  .heading{
+    margin: 15px;
+    margin-top: 0;
+  }
   .btn-cnt{
     width: 80%;
+   margin-top: 120px;
   }
-  
+  .cnt-main{
+    margin-top: 5px;
+  }
   .header{
     font-size: 40px;
     
